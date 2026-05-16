@@ -1,8 +1,10 @@
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage{expl3}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true,linkcolor=black,hidelinks}
-\usepackage{pdfpages}
+
+% \usepackage{hyperref}
+% \hypersetup{colorlinks=true,linkcolor=black,hidelinks}
+% \usepackage{pdfpages}
+
 \GetIdInfo $Id: ecnuthesis.cls 0.1 2021-01-31 12:00:00Z Koyamin <koyafumin@gmail.com> $
   {Undergraduate Thesis Template for East China Normal University}
 \ProvidesExplClass{\ExplFileName}
@@ -86,8 +88,10 @@
     thmtools,
     xeCJKfntef,
     tocloft,
+    pdfpages,
     hyperref,
   }
+\hypersetup{colorlinks=true,linkcolor=black,hidelinks}
 \geometry
   {
     % showframe,
@@ -739,7 +743,9 @@
   {
     \mode_leave_vertical:
     \hbox_to_wd:nn {#1}
-      { \tl_map_inline:xn {#2} { ##1 \hfil } \unskip }
+    % 原来的
+      % { \tl_map_inline:xn {#2} { ##1 \hfil } \unskip }
+      { \exp_args:Nx \tl_map_inline:nn {#2} { ##1 \hfil } \unskip }
   }
 \cs_new_protected:Npn \__ecnu_center_box:nn #1#2
   {

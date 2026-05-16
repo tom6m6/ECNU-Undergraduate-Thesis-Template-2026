@@ -1,4 +1,15 @@
 # ECNU-Undergraduate-Thesis-Template
+
+2026年4月，我在写作毕业论文的时候，使用 [2022届学长的毕业论文模版](https://github.com/QiushiSun/ECNU-Undergraduate-Thesis-Template-2022) 发现存在一些问题，导致编译始终无法正常通过。经查证发现原因在于版本太新（TeX Live 2026），部分内容无法兼容。但是我又不想再下载TeX Live 2022（因为懒😂），所以花了一小时做出一点修改，修改后编译成功了。
+
+编译指令：
+
+```
+xelatex main && biber main && xelatex main && xelatex main
+```
+
+---
+
 本模板为了迎合2018级（2022届）华东师范大学本科生毕业（论文）设计的模板需要，基于 [YijunYuan](https://github.com/YijunYuan)/**[ECNU-Undergraduate-LaTeX](https://github.com/YijunYuan/ECNU-Undergraduate-LaTeX)** 和 [Koyamin](https://github.com/Koyamin)/**[ECNUThesis-Undergraduate](https://github.com/Koyamin/ECNUThesis-Undergraduate)** 进行了修改，让同学们可以最大限度地节约排版时间。
 
 
